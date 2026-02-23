@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background: #020617;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #38bdf8;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #020617;
+    flex-direction: column;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav ul li {
+    padding: 15px 0;
+    border-top: 1px solid #1e293b;
+  }
+
+  #menu-toggle:checked + .menu-icon + nav ul {
+    max-height: 300px;
+  }
+
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  color: #38bdf8;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #cbd5f5;
+}
+
+.card {
+  background: #020617;
+  padding: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+}
+
+.skills {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.skills li {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.cv-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.cv-btn:hover {
+  background: #0ea5e9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #020617;
+  color: #94a3b8;
+  margin-top: 40px;
+}
+
